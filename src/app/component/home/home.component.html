@@ -1,0 +1,58 @@
+<body>
+    <html lang="en">
+
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+            integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    </head>
+
+    <body>
+
+        <main>
+            <div class="books" *ngFor="let book of books">
+                    <span class="new" *ngIf="book.Status === 1">New</span>
+                    <span class="new" *ngIf="book.Status === 2">Hot</span>
+                <div>
+                    <img [routerLink]="['/detail', book.Id]" [src]="book.ImgUrl" alt=""
+                        class="book-img">
+                </div>
+                <div class="descp">
+
+                    <h2 class="book-name" [routerLink]="['/detail', book.Id]">{{book.Title}}</h2>
+                    <h3 class="author">by {{book.Author}}</h3>
+                    <h3 class="rating">1.987 rating</h3>
+                    <h3 class="price">{{book.Price | currency: 'VND'}}</h3>
+                    <p class="info">
+                        {{book.Description}}
+                    </p>
+                    <button type="submit" [routerLink]="['/detail', book.Id]">See the Book</button>
+                    <button class="buy" mat-raised-button (click)="addToCart(book)">Đặt Mua</button>
+
+                </div>
+            </div>
+            <div class="container my-5">
+                <div style="position: fixed; bottom: 10px; right: 30px;"  routerLink="/cart">
+                  <button class="btn btn-primary"><i class="icon icon-shopping-cart"></i></button>
+                </div>
+              </div>
+
+        </main>
+        <div class="page">
+            <!-- Nút "Trang trước" -->
+            <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Trang trước</button>
+            <!-- Hiển thị trang hiện tại -->
+            <span>Trang {{ currentPage }}</span>
+            <!-- Nút "Trang sau" -->
+            <button (click)="goToPage(currentPage + 1)" [disabled]="books.length < itemsPerPage">Trang sau</button>
+            </div>
+    </body>
+
+    </html>
+</body>

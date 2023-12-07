@@ -1,0 +1,82 @@
+<body>
+  <!-- partial:index.partial.html -->
+  <div class='container'>
+    <div class='window'>
+      <div class='order-info'>
+        <div class='order-info-content'>
+          <h2>Order Summary</h2>
+          <div class='line'></div>
+          <div class="table-container">
+            <table class='order-table' *ngFor="let cartItem of cartItems">
+              <tbody>
+                <tr>
+                  <td><img [routerLink]="['/detail', cartItem.BookID]" [src]="cartItem.bookInfo.ImgUrl"
+                      class='full-width'>
+                  </td>
+                  <td>
+                    <br> <span class='thin'>{{ cartItem.bookInfo.Title }}</span>
+                    <br> {{ cartItem.bookInfo.Author }}<br>
+                    <span class='thin small'>Số lượng: {{ cartItem.Quantity}}<br><br></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='price'>{{ cartItem.totalPrice | currency: 'VND' }}</div>
+                  </td>
+                </tr>
+              </tbody>
+
+            </table>
+          </div>
+          <div class='line'></div>
+          <div class='total' *ngFor="let cartItem of cartItems">
+            <span style='float:left;'>
+              <div class='thin dense'>VAT 19%</div>
+              <div class='thin dense'>Delivery</div>
+              TOTAL
+            </span>
+            <span style='float:right; text-align:right;'>
+              <div class='thin dense'>$68.75</div>
+              <div class='thin dense'>$4.95</div>
+              {{ totalPrice | currency: 'VND'}}
+            </span>
+          </div>
+        </div>
+      </div>
+      <form class='credit-info' method="post" >
+
+        <div class='credit-info-content'>
+          <h2>Billing Address</h2>
+          <div class='line'></div>
+          <table class='half-input-table'>
+          </table>
+          <table class='half-input-table'>
+            <tr>
+              <td> First name
+                <input class='input-field' id="firstName" [(ngModel)]="FirstName" name="FirstName" placeholder=""
+                  value="" required>
+              </td>
+              <td>Last name
+                <input class='input-field' id="lastName" [(ngModel)]="LastName" name="LastName" placeholder=""  required>
+              </td>
+            </tr>
+          </table>
+          Email
+          <input class='input-field' [(ngModel)]="Email" id="email" type="email" name="Email" placeholder="" required>
+          Address
+          <input class='input-field' [(ngModel)]="Address" name="Address" id="address" placeholder="" required>
+          Phone
+          <input class='input-field' [(ngModel)]="PhoneNumber" name="PhoneNumber" id="phone" placeholder="" required>
+
+          <button class='pay-btn' (click)="CreateCheckout()">Checkout</button>
+
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+  <!-- partial -->
+
+
+</body>

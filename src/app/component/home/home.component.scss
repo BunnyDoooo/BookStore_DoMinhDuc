@@ -1,0 +1,421 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    margin-top: 100px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------------------------------------------------------- Main css -------------------------------------------------------------*/
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------- fOR PC AND LAPTOPS -------------------------------------------- */
+@media(min-width: 900px){
+    /* ----------------------------------------------------- Navbar ---------------------------------------------------------- */
+   
+
+    /* ------------------- MAIN BOOKS ---------------------------------- */
+    main{
+        margin-top: 1em;
+        font-family: 'Noto Sans JP', sans-serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .books{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 600px;
+        justify-content: space-evenly;
+        background-color: #cbb5e2;
+        border-radius: 10px;
+        margin-bottom: 3em;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+    .books:nth-of-type(2){
+        background-color: #fbadaf;
+    }
+    .books:nth-of-type(3){
+        background-color: #a4e0eb;
+    }
+    .books:nth-of-type(4){
+        background-color: #fdca95;
+    }
+    .books:nth-of-type(5){
+        background-color: #ecf684;
+    }
+    .books:nth-of-type(6){
+        background-color: #c1f07a;
+    }
+    .books:nth-of-type(7){
+        background-color: #a6f270;
+    }
+    .books:nth-of-type(8){
+        background-color: #79e849;
+    }
+    .books:nth-of-type(9){
+        background-color: #6ae975;
+    }
+    .books:nth-of-type(10){
+        background-color: #5eeade;
+    }
+    .books:nth-of-type(11){
+        background-color: #61a0f3;
+    }
+    .books:nth-of-type(12){
+        background-color: #a275f0;
+    }
+    .books:nth-of-type(13){
+        background-color: #ba7ff0;
+    }
+    .books:nth-of-type(14){
+        background-color: #fa88ed;
+    }
+    .books:nth-of-type(15){
+        background-color: #f27eac;
+    }
+    .book-img{
+        width: 100%;
+        
+        max-width: 500px;
+        border-radius: 3px;
+        transition: transform 1s;
+        margin: 1.5em;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    .book-img:hover{
+        transform: scale(1.05);
+    }
+    .descp{
+        margin: 1.5em;
+        padding: 1em;
+        max-width: 300px;
+        
+        
+    }
+    .book-name{
+        font-weight: bold;
+        padding-bottom: 0.5em;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .author{
+        padding-bottom: 0.5em;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .rating{
+        padding-bottom: 1.2em;
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .info{
+        font-size: 1em;
+  letter-spacing: 1px;
+  color: white;
+  max-height: 3em; /* Đặt chiều cao tối đa cho mô tả */
+  overflow: hidden; /* Ẩn nội dung thừa */
+  text-overflow: ellipsis; /* Hiển thị dấu "..." khi nội dung bị ẩn */
+  
+        
+    }
+    .descp button{
+        margin-top: 1em;
+        background: none;
+        border: none;
+        color: #cbb5e2;
+        background-color: white;
+        padding: 0.6em 1.5em;
+        font-size: 1em;
+        border-radius: 20px;
+        font-weight: bolder;
+    }
+    .descp button:hover{
+        color: #a790f2;
+    }
+    #b1{
+        color: #fbadaf;
+    }
+    #b1:hover{
+        color: #ff6e9f;
+    }
+    #b2{
+        color: #a4e0eb;
+    }
+    #b2:hover{
+        color: #62cdec;
+    }
+    #b3{
+        color: #fdca95;
+    }
+    #b3:hover{
+        color: #fb9124;
+    }
+
+.buy{
+    margin-left: 15px;
+}
+.price {
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1em; /* Khoảng cách dưới giá */
+  }
+
+}
+
+  .page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+
+  
+  .new {
+    background: red;
+    color: white;
+    padding: 5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 12px;
+    left: 3px;
+    z-index: 2;
+    transform: rotate(-45deg);
+  }
+  .new:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: rotate(45deg);
+    border-width: 20px 20px 0 20px;
+    border-color: red transparent transparent transparent;
+    position: absolute;
+    right: -27px;
+    bottom: -3px;
+  }
+  .new:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: rotate(-45deg);
+    border-width: 20px 20px 0 20px;
+    border-color: red transparent transparent transparent;
+    position: absolute;
+    left: -27px;
+    bottom: -3px;
+  }
+  
+
+  .icon {
+    content: " ";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-bottom: 0.2em;
+    vertical-align: middle;
+  }
+  
+  .icon-shopping-cart {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M9.23,20.31a1.87,1.87,0,0,1-1.85,1.85A1.85,1.85,0,1,1,8.68,19,1.77,1.77,0,0,1,9.23,20.31Zm12.92,0a1.87,1.87,0,1,1-.55-1.3A1.77,1.77,0,0,1,22.15,20.31ZM24,4.62V12a.89.89,0,0,1-.24.61.91.91,0,0,1-.58.31L8.12,14.68a8.71,8.71,0,0,1,.19,1,2.79,2.79,0,0,1-.35.92H21.23a.92.92,0,0,1,0,1.85H6.46a.94.94,0,0,1-.92-.92,1.38,1.38,0,0,1,.12-.45,5.5,5.5,0,0,1,.23-.52L6.19,16q.19-.35.22-.43L3.87,3.69H.92a.89.89,0,0,1-.65-.27.91.91,0,0,1,0-1.3.89.89,0,0,1,.65-.27H4.62A.88.88,0,0,1,5,1.94a.84.84,0,0,1,.28.22,1.41,1.41,0,0,1,.19.35,2.25,2.25,0,0,1,.12.38l.08.43q.05.27.06.38H23.08a.94.94,0,0,1,.92.92Z'/%3E%3C/svg%3E");
+  }
+  .icon-shopping-cart.icon-primary {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230275D8' d='M9.23,20.31a1.87,1.87,0,0,1-1.85,1.85A1.85,1.85,0,1,1,8.68,19,1.77,1.77,0,0,1,9.23,20.31Zm12.92,0a1.87,1.87,0,1,1-.55-1.3A1.77,1.77,0,0,1,22.15,20.31ZM24,4.62V12a.89.89,0,0,1-.24.61.91.91,0,0,1-.58.31L8.12,14.68a8.71,8.71,0,0,1,.19,1,2.79,2.79,0,0,1-.35.92H21.23a.92.92,0,0,1,0,1.85H6.46a.94.94,0,0,1-.92-.92,1.38,1.38,0,0,1,.12-.45,5.5,5.5,0,0,1,.23-.52L6.19,16q.19-.35.22-.43L3.87,3.69H.92a.89.89,0,0,1-.65-.27.91.91,0,0,1,0-1.3.89.89,0,0,1,.65-.27H4.62A.88.88,0,0,1,5,1.94a.84.84,0,0,1,.28.22,1.41,1.41,0,0,1,.19.35,2.25,2.25,0,0,1,.12.38l.08.43q.05.27.06.38H23.08a.94.94,0,0,1,.92.92Z'/%3E%3C/svg%3E");
+  }
+ 
+  body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        margin-top: 1em;
+        font-family: 'Noto Sans JP', sans-serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .books {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 600px;
+        justify-content: space-evenly;
+        background-color: #cbb5e2;
+        border-radius: 10px;
+        margin-bottom: 3em;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+    }
+    .book-img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 3px;
+        transition: transform 1s;
+        margin: 1.5em;
+    }
+    .book-img:hover {
+        transform: scale(1.05);
+    }
+    .descp {
+        margin: 1.5em;
+        padding: 1em;
+        max-width: 300px;
+    }
+    .book-name {
+        font-weight: bold;
+        padding-bottom: 0.5em;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .author {
+        padding-bottom: 0.5em;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .rating {
+        padding-bottom: 1.2em;
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .info {
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: white;
+        max-height: 3em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .descp button {
+        margin-top: 1em;
+        background: none;
+        border: none;
+        color: #cbb5e2;
+        background-color: white;
+        padding: 0.6em 1.5em;
+        font-size: 1em;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+    .descp button:hover {
+        color: #a790f2;
+    }
+    .buy {
+        margin-left: 15px;
+    }
+    .price {
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+}
+
+/* Thêm CSS cho màn hình di động */
+@media screen and (max-width: 899px) {
+    main {
+        flex-direction: column; /* Đặt kiểu hiển thị cột cho màn hình di động */
+    }
+    .books {
+        max-width: 100%; /* Đặt chiều rộng tối đa cho các sản phẩm */
+        margin-bottom: 1em; /* Khoảng cách giữa các sản phẩm */
+    }
+    .book-img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 3px;
+        transition: transform 1s;
+        margin: 1.5em;
+    }
+    .book-img:hover {
+        transform: scale(1.05);
+    }
+    .descp {
+        max-width: 100%;
+        margin: 1.5em;
+        padding: 1em;
+    }
+    .descp button {
+        background: none;
+        border: none;
+        color: #cbb5e2;
+        background-color: white;
+        padding: 0.6em 1.5em;
+        font-size: 1em;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+    .descp button:hover {
+        color: #a790f2;
+    }
+    .buy {
+        margin-top: 1em;
+    }
+}

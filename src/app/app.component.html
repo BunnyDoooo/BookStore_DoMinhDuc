@@ -1,0 +1,3 @@
+ <app-nav-bar *ngIf="!isLoginPage && !isAdminPage && !isUserPage"></app-nav-bar> 
+<router-outlet></router-outlet>
+<app-footer *ngIf="!isLoginPage && !isAdminPage && !isUserPage"></app-footer>
